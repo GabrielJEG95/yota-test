@@ -64,12 +64,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Gestiones Solicitadas</h1>
+            <h1 class="m-0 text-dark">Historial de Gestiones</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="inicio.php">Inicio</a></li>
-              <li class="breadcrumb-item active">Gestiones Solicitadas</li>
+              <li class="breadcrumb-item active">Historial de Gestiones</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -82,7 +82,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <!-- aqui va la tabla -->
 
-        <?php require_once 'vistas/form/form_gestiones.php';  ?>
+        <?php require_once 'vistas/form/formHist.php';  ?>
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
