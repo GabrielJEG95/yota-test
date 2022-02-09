@@ -13,13 +13,14 @@ $codigoGestion=$_POST['txtIdGestion'];
 $atendido=1;
 $gestion='';
 
-$select="SELECT CodigoGestion from gestion where IdGestion='$codigoGestion'";
+$select="SELECT C_Gestion from gestioncliente where CodGestion='$codigoGestion'";
 $resSelect=mysqli_query($conexion,$select);
-$regSelect=mysqli_fetch_assoc($resSelect);
-$gestion=$regSelect[0];
+while ($item = mysqli_fetch_assoc($resSelect)) {
+    $gestion=$item['C_Gestion'];
+}
 
 $insert = $conexion->prepare("INSERT INTO ticket (CodigoGestion,NombreCliente,ApellidoCliente,DireccionCliente,TelefonoCliente,C_Gestion,ProblemaExpuesta,Solucion) VALUES(?,?,?,?,?,?,?,?)");
-$insert->bind_param("isssisss");
+$insert->bind_param("isssiiss",$codigoGestion,$nombre,$apellido,$direccion,$phone,$gestion,$problema,$solucion);
 if ($insert->execute()) {
   $update="UPDATE gestioncliente set atendido='$atendido' where CodGestion='$codigoGestion'";
   mysqli_query($conexion,$update);
