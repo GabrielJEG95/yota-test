@@ -48,6 +48,12 @@
                   <p>Gestiones</p>
                 </a>
               </li>
+              <li class="nav-item">
+               <a href="historial.php" class="nav-link">
+                 <i class="fas fa-sitemap"></i>
+                 <p>Historial de Gestiones</p>
+               </a>
+             </li>
             </ul>
           </li>
         </ul>
